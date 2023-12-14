@@ -8,7 +8,7 @@ img.addEventListener("click", (e) =>  {
     `<div class="overlay-modal">
       <i class="close fa-solid fa-xmark"></i>
       <img class="overlay-modal__img" src="${e.target.src}" alt="Image">
-      <h3>Trolltunga, Norway</h3>
+      <h3>${e.target.alt}</h3>
     </div>`
   );
 });
