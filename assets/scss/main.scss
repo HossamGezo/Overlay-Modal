@@ -1,0 +1,70 @@
+// Import All Using Helpers Directory
+@use "helpers/usinghelpers" as *;
+
+// Begining Of The Project
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: Arial;
+  height: 100vh;
+  @include flex(null, null, center, center, null);
+}
+.container {
+  width: 80%;
+  padding: 0 10px;
+  margin: 0 auto;
+  @include flex(null, null, center, center, null);
+}
+
+// Begining Of The Project
+.container img {
+  width: 500px;
+  border-radius: 10px;
+  cursor: pointer;
+  @include transition;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.overlay-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: color(overlay-color-09);
+  @include flex(column, null, center, center, null);
+  i {
+    position: absolute;
+    color: color(wht-color-01);
+    font-size: 50px;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+    @include transition;
+    &:hover {
+      color: color(red-color-01);
+    }
+  }
+  img {
+    width: 80%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    @include animation(scaleImage, 1s) {
+      0% {
+        scale: 0;
+      }
+      100% {
+        scale: 1;
+      }
+    }
+  }
+  h3 {
+    color: white;
+  }
+}
