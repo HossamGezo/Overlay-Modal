@@ -3,7 +3,7 @@ let container = document.querySelector(".container");
 let img = document.querySelector("img");
 let close = document.querySelector("i");
 
-img.addEventListener("click", (e) =>  {
+img.addEventListener("click", (e) => {
   container.insertAdjacentHTML("afterend",
     `<div class="overlay-modal">
       <i class="close fa-solid fa-xmark"></i>
